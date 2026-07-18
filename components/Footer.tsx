@@ -1,4 +1,5 @@
 import { social } from "@/lib/constants";
+import Image from "next/image";
 import Link from "next/link";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -24,15 +25,17 @@ export default function Footer() {
     <footer className="bg-charcoal border-t border-white/5">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {/* Brand */}
           <div>
-            <Link href="/" className="mb-4 flex items-center gap-2">
-              <span className="text-cream text-xl font-bold tracking-widest uppercase">
-                Butta
-              </span>
-              <span className="text-gold text-xl font-light tracking-widest uppercase">
-                Store
-              </span>
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Butta Store"
+                width={140}
+                height={40}
+                className="h-9 w-auto lg:h-15"
+                style={{ filter: "brightness(0) invert(1)" }}
+                priority
+              />
             </Link>
             <p className="text-muted max-w-xs text-sm leading-relaxed">
               Curating modern, timeless fashion for the bold and the sophisticated.

@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Butta Store | Modern Fashion",
   description: "Curating modern, timeless fashion for the bold and the sophisticated.",
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

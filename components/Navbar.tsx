@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -24,14 +25,16 @@ export default function Navbar() {
     <nav className="bg-dark-bg/90 fixed top-0 right-0 left-0 z-50 border-b border-white/5 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-cream text-xl font-bold tracking-widest uppercase lg:text-2xl">
-              Butta
-            </span>
-            <span className="text-gold text-xl font-light tracking-widest uppercase lg:text-2xl">
-              Store
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Butta Store"
+              width={140}
+              height={40}
+              className="h-9 w-auto lg:h-15"
+              style={{ filter: "brightness(0) invert(1)" }}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
