@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { InstagramIcon } from "./Footer";
+import { social } from "@/lib/constants";
 
 export default function InstagramCTA() {
   return (
@@ -16,7 +17,7 @@ export default function InstagramCTA() {
           exclusive drops. Join our community of fashion enthusiasts.
         </p>
         <Link
-          href="https://ig.me/m/urbanthread"
+          href={`https://ig.me/m/${social.INSTAGRAM}`}
           target="_blank"
           rel="noopener noreferrer"
           className="border-gold text-gold hover:bg-gold hover:text-dark-bg inline-flex items-center gap-3 border px-10 py-4 text-sm tracking-widest uppercase transition-all duration-500"

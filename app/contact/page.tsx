@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { Mail, Phone, Send } from "lucide-react";
 import Link from "next/link";
 import { InstagramIcon, FacebookIcon } from "@/components/Footer";
+import { contact, social } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Butta Store | Contact",
+  description: "Curating modern, timeless fashion for the bold and the sophisticated.",
+};
 
 export default function ContactPage() {
   return (
@@ -31,7 +38,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-muted text-xs tracking-wider uppercase">Email</p>
-                    <p className="text-cream">hello@urbanthread.com</p>
+                    <p className="text-cream">{contact.EMAIL}</p>
                   </div>
                 </div>
 
@@ -41,7 +48,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-muted text-xs tracking-wider uppercase">Phone</p>
-                    <p className="text-cream">+1 (555) 123-4567</p>
+                    <p className="text-cream">{contact.PHONE}</p>
                   </div>
                 </div>
               </div>
@@ -58,7 +65,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {/* Instagram DM */}
                 <Link
-                  href="https://ig.me/m/urbanthread"
+                  href={`https://ig.me/m/${social.INSTAGRAM}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 rounded-sm border border-white/10 p-5 transition-all duration-300 hover:border-pink-500/50 hover:bg-white/5"
@@ -76,7 +83,7 @@ export default function ContactPage() {
 
                 {/* Facebook Messenger */}
                 <Link
-                  href="https://m.me/urbanthread"
+                  href={`https://m.me/${social.FACEBOOK}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 rounded-sm border border-white/10 p-5 transition-all duration-300 hover:border-blue-500/50 hover:bg-white/5"

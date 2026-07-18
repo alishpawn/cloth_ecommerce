@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Urban Thread | Modern Fashion",
+  title: "Butta Store | Modern Fashion",
   description: "Curating modern, timeless fashion for the bold and the sophisticated.",
 };
 

@@ -27,10 +27,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-cream text-xl font-bold tracking-widest uppercase lg:text-2xl">
-              Urban
+              Butta
             </span>
             <span className="text-gold text-xl font-light tracking-widest uppercase lg:text-2xl">
-              Thread
+              Store
             </span>
           </Link>
 

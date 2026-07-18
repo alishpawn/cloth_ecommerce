@@ -1,3 +1,4 @@
+import { social } from "@/lib/constants";
 import Link from "next/link";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -27,10 +28,10 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-4 flex items-center gap-2">
               <span className="text-cream text-xl font-bold tracking-widest uppercase">
-                Urban
+                Butta
               </span>
               <span className="text-gold text-xl font-light tracking-widest uppercase">
-                Thread
+                Store
               </span>
             </Link>
             <p className="text-muted max-w-xs text-sm leading-relaxed">
@@ -72,7 +73,7 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4">
               <Link
-                href="https://ig.me/m/urbanthread"
+                href={`https://ig.me/m/${social.INSTAGRAM}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:border-gold hover:text-gold flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-all duration-300"
@@ -81,7 +82,7 @@ export default function Footer() {
                 <InstagramIcon className="h-5 w-5" />
               </Link>
               <Link
-                href="https://m.me/urbanthread"
+                href={`https://m.me/${social.FACEBOOK}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:border-gold hover:text-gold flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition-all duration-300"
