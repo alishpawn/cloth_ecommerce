@@ -4,10 +4,17 @@ interface ProductCardProps {
   name: string;
   price: string;
   image: string;
-  category?: string;
+  category: string;
+  subCategory: string;
 }
 
-export default function ProductCard({ name, price, image, category }: ProductCardProps) {
+export default function ProductCard({
+  name,
+  price,
+  image,
+  category,
+  subCategory,
+}: ProductCardProps) {
   return (
     <div className="group cursor-pointer">
       {/* Image */}
@@ -26,7 +33,9 @@ export default function ProductCard({ name, price, image, category }: ProductCar
       {/* Info */}
       <div>
         {category && (
-          <p className="text-muted mb-1 text-xs tracking-widest uppercase">{category}</p>
+          <p className="text-muted mb-1 text-xs tracking-widest uppercase">
+            {subCategory}
+          </p>
         )}
         <h3 className="text-cream text-sm font-medium tracking-wide">{name}</h3>
         <p className="text-gold mt-1 text-sm">{price}</p>

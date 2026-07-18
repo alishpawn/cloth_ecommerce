@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import FeaturedProducts from "@/components/FeaturedProducts";
-import BrandStory from "@/components/BrandStory";
+// import BrandStory from "@/components/BrandStory";
 import InstagramCTA from "@/components/InstagramCTA";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <HeroSection />
       <FeaturedProducts />
-      <BrandStory />
+      {/*<BrandStory />*/}
       <InstagramCTA />
     </>
   );

@@ -4,7 +4,15 @@ import { useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import { products as allProducts } from "@/lib/products";
 
-const categories = ["All", "Men", "Women", "Accessories"];
+const categories = [
+  "All",
+  "Embroidery Bags",
+  "Woollen Shawls",
+  "Pashmina Sweaters",
+  "Pashmina Shawls",
+  "Pashmina Poncho",
+  "Pashmina Mufflers",
+];
 
 export default function CollectionPage() {
   const [active, setActive] = useState("All");
@@ -42,8 +50,8 @@ export default function CollectionPage() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filtered.map((product) => (
-            <ProductCard key={product.name} {...product} />
+          {filtered.map((product, i) => (
+            <ProductCard key={i} {...product} />
           ))}
         </div>
 
