@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Mail, Phone, Send } from "lucide-react";
 import Link from "next/link";
-import { InstagramIcon, FacebookIcon } from "@/components/Footer";
-import { contact, social } from "@/lib/constants";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon } from "@/components/Footer";
+import { contact, social, WHATSAPP } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Butta Store | Contact",
@@ -62,22 +62,22 @@ export default function ContactPage() {
                 typically respond within a few hours!
               </p>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="flex gap-3">
                 {/* Instagram DM */}
                 <Link
                   href={`https://ig.me/m/${social.INSTAGRAM}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-sm border border-white/10 p-5 transition-all duration-300 hover:border-pink-500/50 hover:bg-white/5"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-purple-500 via-pink-500 to-orange-400">
                     <InstagramIcon className="h-6 w-6 text-white" />
                   </div>
-                  <div>
-                    <p className="text-cream font-medium transition-colors group-hover:text-pink-400">
-                      Instagram DM
-                    </p>
-                    <p className="text-muted text-xs">Send us a message</p>
+                </Link>
+
+                {/* WhatsApp */}
+                <Link href={WHATSAPP.url} target="_blank" rel="noopener noreferrer">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-600">
+                    <WhatsAppIcon className="h-6 w-6 text-white" />
                   </div>
                 </Link>
 
@@ -86,16 +86,9 @@ export default function ContactPage() {
                   href={`https://m.me/${social.FACEBOOK}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-sm border border-white/10 p-5 transition-all duration-300 hover:border-blue-500/50 hover:bg-white/5"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600">
                     <FacebookIcon className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-cream font-medium transition-colors group-hover:text-blue-400">
-                      Facebook Messenger
-                    </p>
-                    <p className="text-muted text-xs">Chat with us</p>
                   </div>
                 </Link>
               </div>
